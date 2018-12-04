@@ -1,5 +1,7 @@
 require_relative 'word_bank'
 
+# This class is responsible for extracting words from a file and passing them to
+# a word bank
 class WordExtractor
   def initialize(word_bank: WordBank.new)
     @word_bank = word_bank

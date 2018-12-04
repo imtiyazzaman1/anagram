@@ -1,3 +1,4 @@
+# This class is responsible for storing words
 class WordBank
   def initialize
     @bank = []
@@ -10,5 +11,4 @@ class WordBank
   def bank
     @bank.dup
   end
-
 end
