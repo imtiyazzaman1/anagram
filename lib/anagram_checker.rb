@@ -1,7 +1,12 @@
 # This class is responsible for checking what words are an anagram of the input
 class AnagramChecker
+  attr_reader :word_bank
   def initialize
     @word_bank = ['post', 'pasta', 'pots', 'tops', 'opts', 'spot', 'stop']
+  end
+
+  def add_word(word)
+    @word_bank << word
   end
 
   def solve(word_input)
