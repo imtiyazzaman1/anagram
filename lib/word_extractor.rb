@@ -8,8 +8,15 @@ class WordExtractor
   def extract_from_file(file_name)
     File.open("./#{file_name}", 'r') do |file|
       file.each_line do |word|
-        @word_bank.add(word)
+        add_to_word_bank(word)
       end
     end
+  end
+
+  private
+
+  def add_to_word_bank(word)
+    word = word.delete("\n")
+    @word_bank.add(word)
   end
 end
