@@ -1,6 +1,6 @@
 class WordBank
   def initialize
-    @bank = ['post', 'pasta', 'pots', 'tops', 'opts', 'spot', 'stop']
+    @bank = []
   end
 
   def add(word)
