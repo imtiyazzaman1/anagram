@@ -1,7 +1,7 @@
 require 'word_extractor'
 
 describe WordExtractor do
-  let(:word_bank) { double :word_bank}
+  let(:word_bank) { double :word_bank }
   let(:subject) { described_class.new(word_bank: word_bank) }
 
   describe '#extract_from_file' do

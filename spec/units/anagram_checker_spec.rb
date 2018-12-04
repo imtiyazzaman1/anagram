@@ -13,7 +13,9 @@ describe AnagramChecker do
 
   describe '#solve' do
     it 'returns a list of words that are an anagram for the word passed in' do
-      allow(word_bank).to receive(:bank).and_return(['post', 'pasta', 'pots', 'tops', 'opts', 'spot', 'stop'])
+      allow(word_bank).to receive(:bank).and_return(
+        %w[post pasta pots tops opts spot stop]
+      )
 
       expect(subject.solve('stop')).to eq(
         "post\npots\ntops\nopts\nspot"
