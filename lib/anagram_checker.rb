@@ -1,9 +1,11 @@
 require_relative 'word_bank'
 require_relative 'word_extractor'
+
 # This class is responsible for checking what words are an anagram of the input
 class AnagramChecker
   attr_reader :word_bank, :word_extractor
-  def initialize(word_bank: WordBank.new, word_extractor: WordExtractor.new(word_bank: word_bank))
+  def initialize(word_bank: WordBank.new,
+                 word_extractor: WordExtractor.new(word_bank: word_bank))
     @word_bank = word_bank
     @word_extractor = word_extractor
   end
