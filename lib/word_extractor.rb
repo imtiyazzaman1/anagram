@@ -1,3 +1,5 @@
+require_relative 'word_bank'
+
 class WordExtractor
   def initialize(word_bank: WordBank.new)
     @word_bank = word_bank
