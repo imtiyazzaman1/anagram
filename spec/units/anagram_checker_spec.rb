@@ -12,14 +12,23 @@ describe AnagramChecker do
   end
 
   describe '#solve' do
-    it 'returns a list of words that are an anagram for the word passed in' do
+    before(:each) do
       allow(word_bank).to receive(:bank).and_return(
         %w[post pasta pots tops opts spot stop]
       )
-
+    end
+    it 'returns a list of words that are an anagram for the word passed in' do
       expect(subject.solve('stop')).to eq(
         "post\npots\ntops\nopts\nspot"
       )
+    end
+
+    context 'contains invalid characters' do
+      it 'throws an error' do
+        expect { subject.solve('st0p') }.to raise_error(
+          'Error! Invalid character found'
+        )
+      end
     end
   end
 end
