@@ -17,7 +17,9 @@ describe WordExtractor do
 
     context 'when file does not exist' do
       it 'throws an error' do
-        expect { subject. extract_from_file('wrd_list.txt') }.to raise_error('Error! File not found')
+        expect { subject. extract_from_file('wrd_list.txt') }.to raise_error(
+          'Error! File not found'
+        )
       end
     end
   end
