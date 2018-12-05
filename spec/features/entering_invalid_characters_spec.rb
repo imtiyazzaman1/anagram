@@ -7,4 +7,13 @@ describe 'Entering invalid characters' do
         "Enter a word\nError! Invalid character found\n").to_stdout
     end
   end
+
+  context 'when a special character' do
+    let(:user_input) { 'word!' }
+    it 'displays an error' do
+      allow_any_instance_of(Object).to receive(:gets).and_return(user_input)
+      expect { load 'main.rb' }.to output(
+        "Enter a word\nError! Invalid character found\n").to_stdout
+    end
+  end
 end
