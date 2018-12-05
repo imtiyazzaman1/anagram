@@ -8,6 +8,7 @@ class WordExtractor
   end
 
   def extract_from_file(file_name)
+    check_file_exists(file_name)
     File.open("./#{file_name}", 'r') do |file|
       file.each_line do |word|
         add_to_word_bank(word)
@@ -20,5 +21,9 @@ class WordExtractor
   def add_to_word_bank(word)
     word = word.delete("\n")
     @word_bank.add(word)
+  end
+
+  def check_file_exists(file_name)
+    raise 'Error! File not found' unless File.exist?(file_name)
   end
 end

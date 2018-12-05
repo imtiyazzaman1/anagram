@@ -14,5 +14,11 @@ describe WordExtractor do
       expect(word_bank).to receive(:add).exactly(7).times
       subject.extract_from_file('word_list.txt')
     end
+
+    context 'when file does not exist' do
+      it 'throws an error' do
+        expect { subject. extract_from_file('wrd_list.txt') }.to raise_error('Error! File not found')
+      end
+    end
   end
 end
