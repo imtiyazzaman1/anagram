@@ -23,6 +23,14 @@ describe AnagramChecker do
       )
     end
 
+    context 'word contains uppercase letters' do
+      it 'returns a list of words that are an anagram' do
+        expect(subject.solve('sToP')).to eq(
+          "post\npots\ntops\nopts\nspot"
+        )
+      end
+    end
+
     context 'contains invalid characters' do
       it 'throws an error' do
         expect { subject.solve('st0p') }.to raise_error(

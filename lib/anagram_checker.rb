@@ -15,10 +15,11 @@ class AnagramChecker
   end
 
   def solve(word_input)
-    check_word(word_input)
-    letters = word_input.chars.sort
+    word_to_check = word_input.downcase
+    check_word(word_to_check)
+    letters = word_to_check.downcase.chars.sort
     words = @word_bank.bank.select do |word|
-      word.chars.sort == letters && word != word_input
+      word.chars.sort == letters && word != word_to_check
     end
 
     words.join("\n")
