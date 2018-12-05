@@ -2,7 +2,8 @@ require 'anagram_checker'
 
 describe AnagramChecker do
   let(:word_bank) { double :word_bank }
-  let(:subject) { described_class.new(word_bank: word_bank) }
+  let(:word_extractor) { double :word_extractor }
+  let(:subject) { described_class.new(word_bank: word_bank, word_extractor: word_extractor) }
 
   describe '#add_word' do
     it 'adds to word bank' do
