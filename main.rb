@@ -3,10 +3,8 @@ require_relative 'lib/anagram_checker'
 checker = AnagramChecker.new
 
 puts 'Enter a word'
-input = gets.chomp.split(' ')
-
-word_input = input[0]
-file_input = input[1]
+word_input = gets.chomp
+file_input = gets.chomp
 
 checker.word_extractor.extract_from_file(file_input)
 
