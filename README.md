@@ -67,4 +67,4 @@ You can load your own list of words but they must adhere to the following:
 - Each word must be on a new line
 
 ## Known Issues
-Currently, there is no check to see if the same word appears more than once within the selected file. There is also no check for the same word but contain capital letter, so `stop`, `Stop` and `STOP` would be all be transferred to the `WordBank`
+Currently, there is no check to see if the same word appears more than once within the selected file. There is also no check for the same word containing capital letters, so `stop`, `Stop` and `STOP` would be all be transferred to the `WordBank`
