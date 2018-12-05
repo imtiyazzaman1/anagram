@@ -17,17 +17,19 @@ class AnagramChecker
   def solve(word_input)
     word_to_check = word_input.downcase
     check_word(word_to_check)
-    letters = word_to_check.downcase.chars.sort
-    words = @word_bank.bank.select do |word|
-      word.chars.sort == letters && word != word_to_check
-    end
-
-    words.join("\n")
+    letters = word_to_check.chars.sort
+    select_words(letters, word_to_check).join("\n")
   end
 
   private
 
   def check_word(word)
     raise 'Error! Invalid character found' unless word[/[a-zA-Z]+/] == word
+  end
+
+  def select_words(letters, word_to_check)
+    @word_bank.bank.select do |word|
+      word.chars.sort == letters && word != word_to_check
+    end
   end
 end
