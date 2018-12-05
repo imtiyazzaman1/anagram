@@ -19,7 +19,7 @@ The anagrams are:\npost\npots\ntops\nopts\nspot\n"
 
       expect { load 'main.rb' }.to output(
         "Enter a word\nEnter the name of the file contain a list of words
-The anagrams are:\n\n"
+The anagrams are:\n"
       ).to_stdout
     end
   end

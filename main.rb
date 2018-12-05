@@ -2,7 +2,7 @@ require_relative 'lib/anagram_checker'
 
 def main
   checker = AnagramChecker.new
-  
+
   loop do
     puts 'Enter a word'
     word_input = gets.chomp
@@ -12,8 +12,7 @@ def main
 
     checker.word_extractor.extract_from_file(file_input)
 
-    puts 'The anagrams are:'
-    puts checker.solve(word_input)
+    puts "The anagrams are:\n#{checker.solve(word_input)}"
     break
   end
 end
