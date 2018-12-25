@@ -42,7 +42,7 @@ The test files can be found in the `spec` folder.
 ## How to Use The Application
 Upon the loading `main.rb`, the user is prompted to enter a word. This is case insensitive but must contain only letters - entering any numbers of special characters will cause the program to throw an error.
 
-After entering a word, the user is prompted to enter the file name of the file they wish to check against. This file must be a `txt` file located in the roor of the directory - if the file is not found, it will throw an error.
+After entering a word, the user is prompted to enter the file name of the file they wish to check against. This file must be a `txt` file located in the root of the directory - if the file is not found, it will throw an error.
 
 If the program finds any anagrams they will the be displayed.
 
